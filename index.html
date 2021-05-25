@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>prueba-js</title>
+</head>
+<body>
+	<script>
+		
+		let perro1 = 5;
+		let perro2 = 4;
+		let perro3 = 3;
+
+		function nombre() {
+			let nombre = 'Ramiro';
+			let apellido = 'Giunta';
+			console.log ('Mi nombre es '+ nombre + ' ' + apellido);
+		}
+		
+		function calcularEdad (edad, nombre) {
+		
+			let calculo = edad*7
+
+			console.log ('La edad de mi perro', nombre, 'en años humanos es', calculo)
+ 		}
+		nombre()
+		calcularEdad (perro1, 'Luke');
+
+		let dolar = 1;
+		let peso = 140;
+
+		function calcularDolares (dolar) {
+			let calculo = peso*dolar;
+			console.log ('Mis', dolar, 'dólares son iguales a', calculo, 'pesos')
+		}
+		calcularDolares (100)
+	</script>
+</body>
+</html>
