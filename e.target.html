@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="saludos"></div>
+    <input type="text" id="entrada"> <br> <br>
+    <button id="btn">Saludar</button>
+    <p id="cantidades"></p> 
+
+    <script>
+        let cantidadDeSaludos = 0;
+        let titulo = document.getElementById ('saludo')
+        let entradaLoca = document.getElementById ('entrada')
+        let btn = document.getElementById ('btn')
+        let contenedor = document.getElementById ('saludos')
+        let cantidades = document.getElementById ('cantidades')
+
+        btn.addEventListener ('click', function() { 
+            let tipo = entradaLoca.value
+            if (tipo != ''){
+                cantidadDeSaludos++
+                let saludito = 'Hola, ' + tipo + '!' + ' Bienvenido!'
+                let sal = document.createElement('h1')
+                let txt = document.createTextNode(saludito)
+                sal.appendChild(txt)
+                contenedor.appendChild(sal)
+                if (cantidadDeSaludos!=1) {
+                    cantidades.innerHTML ='Saludamos a '+cantidadDeSaludos+' personas.'
+                } else {
+                    cantidades.innerHTML ='Saludamos a '+cantidadDeSaludos+' persona.'
+                }
+            }
+        })
+    
+        document.addEventListener('click', function(e){
+            if(e.target.localName == 'h1'){
+                alert('Soy un h1')
+            }
+           
+        })
+        
+    </script>
+    
+</body>
+</html>
