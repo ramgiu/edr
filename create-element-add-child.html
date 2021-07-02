@@ -7,19 +7,17 @@
     <title>Document</title>
 </head>
 <body>
-    <div class="saludos">
-        <h1 id="saludo"></h1>
-    </div>
+    <div id="saludos"></div>
     <input type="text" id="entrada"> <br> <br>
     <button id="btn">Saludar</button>
-    <p id="cantidades"></p>
+    <p id="cantidades"></p> 
 
     <script>
         let cantidadDeSaludos = 0;
         let titulo = document.getElementById ('saludo')
         let entradaLoca = document.getElementById ('entrada')
         let btn = document.getElementById ('btn')
-        let contenedor = document.getElementById ('saludo')
+        let contenedor = document.getElementById ('saludos')
         let cantidades = document.getElementById ('cantidades')
 
         btn.addEventListener ('click', function() {
@@ -30,11 +28,11 @@
             let txt = document.createTextNode(saludito)
             sal.appendChild(txt)
             contenedor.appendChild(sal)
-            if(cantidadDeSaludos>1){
-                cantidades.innerHTML = "Saludamos a "+cantidadDeSaludos+" personas."
-             } else {
-                    cantidades.innerHTML = "Saludamos a "+cantidadDeSaludos+" persona."
-                }
+            if (cantidadDeSaludos!=1) {
+                cantidades.innerHTML ='Saludamos a '+cantidadDeSaludos+' personas.'
+            } else {
+                cantidades.innerHTML ='Saludamos a '+cantidadDeSaludos+' persona.'
+            }
         })
     </script>
     
