@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bucle For</title>
+</head>
+<body>
+    <ul id="contenedor"></ul>
+
+    <script>
+
+        let n = 1;
+        
+        function cargarNumero(n){
+        let contenedor = document.getElementById('contenedor')
+        let li = document.createElement('li')
+        let txt = document.createTextNode(n+' desde la función')
+        li.appendChild(txt)
+        contenedor.appendChild(li)
+        }
+
+        cargarNumero(n)
+
+
+    </script>
+</body>
+</html>
