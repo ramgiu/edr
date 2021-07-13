@@ -10,7 +10,8 @@
     <ul id="contenedor"></ul>
 
     <script>
-        
+        let i=0
+
         function cargarNumero(n){
         let contenedor = document.getElementById('contenedor')
         let li = document.createElement('li')
@@ -19,9 +20,19 @@
         contenedor.appendChild(li)
         }
 
-        for(var n=0; n<100; n++) {
-            cargarNumero(n+1)
-        }
+    //    for(var n=0; n<100; n++) {
+     //       cargarNumero(n+1)
+     //   }
+
+     //while (i<7){
+       //  i=Math.random()*8
+       //  cargarNumero(i)
+     //}
+
+     do{
+         cargarNumero(i+1)
+         i++
+     } while(i<5)
 
 
     </script>
