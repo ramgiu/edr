@@ -4,47 +4,19 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Switch Case</title>
+    <title>Arrays</title>
 </head>
 <body>
     <ul id="contenedor"></ul>
 
     <script>
-        let dia = 'Lunes'
-        switch (dia) {
+        let dia = 3
+        let dias = new Array('Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sabado', 'Domingo')
 
-            case 'Lunes':
-                document.write(1)
-                break
-            
-            case 'Martes':
-                document.write(2)
-
-            case 'Miércoles':
-                document.write(3)
-                break
-            
-            case 'Jueves':
-                document.write(4)
-                break
-
-            case 'Viernes':
-                document.write(5)
-                break
-
-            case 'Sábado':
-                document.write(6)
-                break
-
-            case 'Domingo':
-                document.write(7)
-                break
-            
-            default:
-                document.write('Este no es un día de la semana')
-            
+        for(var i = 0; i < dias.length; i++){
+            document.write(dias[i]+'<br>')
         }
-
+        
     </script>
 </body>
 </html>

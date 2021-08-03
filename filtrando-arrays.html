@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filtrando Arrays</title>
+</head>
+<body>
+    <ul id="contenedor"></ul>
+
+    <script>
+        let dia = 3
+        let dias = new Array('Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado', 'Domingo')
+
+        let diasLaborales = dias.filter(function(item){
+            return item != 'Sábado' && item!= 'Domingo'
+        })
+
+        for(var i = 0; i < diasLaborales.length; i++){
+            document.write(diasLaborales[i]+'<br>')
+        }
+        
+    </script>
+</body>
+</html>
